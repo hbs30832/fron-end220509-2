@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- a 태그 : anchor(닻)의 약자. 다른 문서로 연결할 때 사용 -->
+    <!-- href 속성 : 해당 주소로 이동. 새로고침이 일어남. -->
+    <!-- target 속성 : _blank를 넣어주면 새 창에서 페이지 열린다. -->
+    <!-- a 태그안에는 글씨 뿐만 아니라 이미지 등도 사용 가능하다. -->
+    <!-- href 속성에 #을 넣으면 이동이 일어나지 않는다. -->
+    <h1>Front-End</h1>
+    <ul>
+      <li>
+        <a
+          id="target"
+          href="https://developer.mozilla.org/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
+          >HTML</a
+        >
+      </li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="./javascript.html">JavaScript</a></li>
+    </ul>
+    <script>
+      const $target = document.getElementById("target");
+      $target.setAttribute("href", "https://www.google.com");
+      console.log($target);
+    </script>
+  </body>
+</html>
