@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>회원가입</legend>
+        <ul>
+          <li>
+            <label
+              >아이디
+              <input type="text" autofocus placeholder="아이디" required
+            /></label>
+          </li>
+          <li>
+            <label
+              >이메일 <input type="email" placeholder="이메일" required
+            /></label>
+          </li>
+          <li>
+            <label
+              >비밀번호 <input type="password" placeholder="비밀번호" required
+            /></label>
+          </li>
+          <li>
+            <label
+              >비밀번호 확인
+              <input type="password" placeholder="비밀번호 확인" required
+            /></label>
+          </li>
+          <li>
+            <label
+              >가입 경로
+              <select name="" id="">
+                <option value="">검색</option>
+                <option value="">블로그</option>
+                <option value="">지인추천</option>
+              </select>
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>마케팅 수신 여부</legend>
+        <ul>
+          <li>
+            이메일 :
+            <label for="agreeEmail">수신</label>
+            <input
+              type="radio"
+              name="reciveEmail"
+              value="true"
+              id="agreeEmail"
+              checked
+            />
+            <label for="disagreeEmail"> 수신 안함</label>
+            <input
+              type="radio"
+              name="reciveEmail"
+              value="false"
+              id="disagreeEmail"
+            />
+          </li>
+          <li>
+            SMS :
+            <label for="agreeSMS">수신</label>
+            <input type="radio" name="reciveSMS" value="true" id="agreeSMS" />
+            <label for="disagreeSMS"> 수신 안함</label>
+            <input
+              type="radio"
+              name="reciveSMS"
+              value="false"
+              id="disagreeSMS"
+            />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>관심사</legend>
+        <label> IT<input type="checkbox" name="" /> </label>
+        <label> 미술<input type="checkbox" name="" /> </label>
+        <label> 음악<input type="checkbox" name="" /> </label>
+        <label> 의학<input type="checkbox" name="" /> </label>
+      </fieldset>
+      <div>
+        <button type="submit">가입하기</button>
+        <button type="reset">초기화</button>
+      </div>
+    </form>
+  </body>
+</html>
