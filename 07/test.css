@@ -1,0 +1,16 @@
+h2 {
+  font-size: 100px;
+  color: tomato;
+}
+
+.blue h2 {
+  color: blue;
+}
+
+.small h2 {
+  font-size: 30px;
+}
+
+.small p {
+  font-size: 10px;
+}

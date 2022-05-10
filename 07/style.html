@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      h1 { color: black; font-size: 100px; }
+      h2 {
+        font-size: 100px;
+        color: red;
+      }
+      div h2 {
+        color: blue;
+      }
+      /* 선택자 : 스타일을 적용하고 싶은 요소를 선택. */
+      /* 경로가 정확할수록 우선순위가 높다. => 같은 속성일 경우 */
+      /* 공통적으로 적용할 스타일을 적용하고 정확한 경로를 지정해서 특정 속성만 변경. */
+    </style>
+  </head>
+  <body>
+    <h1 style="color: red; text-align: center">프론트엔드</h1>
+    <div>
+      <h2>CSS란?</h2>
+      <p>CSS는 Cascading Style Sheet의 줄임말이다.</p>
+    </div>
+    <h2>HTML이란?</h2>
+    <p>HTML은 웹 브라우저 실질적으로 출력되는 문서이다.</p>
+  </body>
+</html>

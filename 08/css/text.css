@@ -1,0 +1,37 @@
+/* font-family : 글꼴을 지정하는 속성. */
+html {
+  font-size: 14px;
+}
+.fontFamily {
+  font-family: "Nanum Brush Script", Courier, monospace;
+}
+
+.fontSize {
+  font-size: 20px;
+}
+.fontSize h2 {
+  /* 
+    px : 화면의 픽셀 단위.
+    em : 부모 요소의 글자 사이즈에 대한 비율.
+    rem : 문서의 글자 사이즈에 대한 비율.
+  */
+  font-size: 2rem;
+}
+.fontSize p {
+  font-size: 24px;
+}
+
+.fontStyle h2 {
+  /* font-style : normal; 기본값*/
+  font-style: italic;
+}
+.fontStyle p {
+  font-style: oblique;
+}
+
+.color h2 {
+  color: #ffb4ae;
+}
+.color p {
+  color: rgb(100, 100, 255);
+}

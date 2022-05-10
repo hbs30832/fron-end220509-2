@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- inputPassword : 카멜 케이스 -->
+    <!-- input_pasword : 스네이크 케이스-->
+    <!-- input : form안에 담을 데이터를 입력할 수 있는 태그. -->
+    <form id="form">
+      <ul>
+        <li>
+          <label>
+            아이디
+            <input
+              type="text"
+              autofocus
+              placeholder="아이디를 입력하세요."
+              name="userId"
+              required
+            />
+          </label>
+          <label for="inputPassword">비밀번호 </label>
+          <input
+            type="password"
+            placeholder="비밀번호(8글자 이상) 입력하세요."
+            id="inputPassword"
+            name="password"
+          />
+        </li>
+        <li>이메일 : <input type="email" name="email" /></li>
+        <li>
+          <label>사과<input type="checkbox" value="apple" checked /></label>
+          <label>포도<input type="checkbox" value="grape" /></label>
+          <label>바나나<input type="checkbox" value="banana" /></label>
+          <label>오렌지<input type="checkbox" value="orange" /></label>
+        </li>
+        <li>
+          이메일 수신 여부 :
+          <label>
+            <input type="radio" name="reciveEmail" value="true" checked />
+            수신
+          </label>
+          <label>
+            <input type="radio" name="reciveEmail" value="false" />
+            미수신
+          </label>
+        </li>
+        <li>
+          <select name="fruit" id="">
+            <option value="apple">사과</option>
+            <option value="banana">바나나</option>
+            <option value="orange">오렌지</option>
+          </select>
+        </li>
+      </ul>
+      <button type="button" id="btnSubmit">제출하기</button>
+      <button type="reset">초기화</button>
+    </form>
+    <script>
+      const btnElem = document.getElementById("btnSubmit");
+      btnElem.addEventListener("click", (e) => {
+        const formElem = document.getElementById("form");
+        const form = new FormData(formElem);
+        for (let pair of form.entries()) {
+          console.log(`${pair[0]} : ${pair[1]}`);
+        }
+      });
+    </script>
+  </body>
+</html>
