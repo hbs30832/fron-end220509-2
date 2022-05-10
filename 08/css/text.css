@@ -35,3 +35,32 @@ html {
 .color p {
   color: rgb(100, 100, 255);
 }
+
+.textAlign {
+  text-align: left;
+}
+
+.lineHeight {
+  font: 24px;
+  /* line-height: 1.5em; */
+}
+.lineHeight p {
+  line-height: 1.5em;
+}
+
+.textDecoration p {
+  text-decoration: underline;
+}
+
+.textTransform p {
+  text-transform: lowercase;
+}
+
+.textShadow h2 {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.spacing p {
+  letter-spacing: 0.1em;
+  word-spacing: 10px;
+}

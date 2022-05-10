@@ -1,0 +1,35 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: cadetblue;
+}
+
+.container {
+  text-align: center;
+}
+
+.container .rowBoxList {
+  display: inline-block;
+}
+
+.container .rowBoxList .box {
+  margin-top: 10px;
+}
+
+.container .colBoxList {
+  /* display: inline-block; */
+}
+
+.container .colBoxList .box {
+  display: inline-block;
+}
+
+.container .rowBoxList .box {
+}
+
+.container .grid {
+  margin-top: 100px;
+}
+.container .grid .gridList .box {
+  display: inline-block;
+}
