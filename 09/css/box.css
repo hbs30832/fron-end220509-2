@@ -4,14 +4,26 @@ body {
   /* text-align: center; */
 }
 .box {
-  height: 200px;
-  width: 200px;
-  background-color: black;
-  color: #fff;
+  height: 100px;
+  width: 100px;
+  /* background-color: black; */
+  /* color: #fff; */
   padding: 10px; /*padding은 안쪽여백이다.*/
   margin: 0 auto; /* 가운데로 위치(가로정렬). */
-  border: 10px solid red;
+  border: 2px solid red;
+  border-radius: 50%;
   margin-bottom: 10px;
+  overflow: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box img {
+  width: 120px;
+  transition: 0.25s;
+}
+.box:hover img {
+  width: 140px;
 }
 .box p {
   margin: 0; /* margin은 바깥여백이다. */

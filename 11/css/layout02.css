@@ -1,0 +1,69 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.clearFix::after {
+  display: block;
+  content: "";
+  visibility: hidden;
+  clear: both;
+}
+
+.container {
+  /* text-align: center; */
+  background-color: #888;
+}
+.nav {
+  float: left;
+  padding: 10px 0;
+  background-color: #777;
+}
+
+.nav li {
+  float: left;
+  /* margin-right: 10px; */
+  color: #fff;
+}
+
+.nav li + li {
+  margin-left: 10px;
+}
+
+.nav li a {
+  display: inline-block;
+  width: 90px;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.nav li a[href="https://www.naver.com"]
+{
+  color: red;
+}
+
+.login {
+  float: right;
+  background-color: #666;
+  padding: 10px;
+}
+
+.login li {
+  float: left;
+  /* margin: 10px; */
+}
+
+.login li a {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.sidebar {
+  width: 200px;
+  height: calc(100vh - 48px);
+  background-color: #555;
+}

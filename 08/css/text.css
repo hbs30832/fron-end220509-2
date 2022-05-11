@@ -9,6 +9,12 @@ html {
 .fontSize {
   font-size: 20px;
 }
+.fontWeight p {
+  /* font-weight: 400; 기본값. 100~900까지 100단위로 지정. */
+  /* 해당 굵기의 폰트가 설치되어있어야 적용 가능. */
+  font-weight: bold; /* 키워드를 사용해도 무방. */
+}
+
 .fontSize h2 {
   /* 
     px : 화면의 픽셀 단위.

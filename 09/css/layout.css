@@ -1,35 +1,13 @@
 .box {
   width: 100px;
   height: 100px;
-  background-color: cadetblue;
+  border: 1px solid black;
+  display: inline-block;
+  /* padding: 10px; */
 }
-
 .container {
-  text-align: center;
-}
-
-.container .rowBoxList {
-  display: inline-block;
-}
-
-.container .rowBoxList .box {
-  margin-top: 10px;
-}
-
-.container .colBoxList {
-  /* display: inline-block; */
-}
-
-.container .colBoxList .box {
-  display: inline-block;
-}
-
-.container .rowBoxList .box {
-}
-
-.container .grid {
-  margin-top: 100px;
-}
-.container .grid .gridList .box {
-  display: inline-block;
+  background-color: aqua;
+  height: 200px;
+  line-height: 200px;
+  font-size: 0;
 }

@@ -1,0 +1,18 @@
+a {
+  display: block;
+  width: 200px;
+  height: 220px;
+  background: url("../../09/yegi.jpeg") no-repeat center;
+  background-size: 100%;
+  text-align: center;
+  color: #fff;
+  line-height: 200px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+
+a:hover {
+  font-weight: 700;
+  color: red;
+  background-size: 220px;
+}

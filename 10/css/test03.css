@@ -1,0 +1,10 @@
+body {
+  height: 1500px;
+}
+.background {
+  height: 100vh;
+  background-image: url("../images/iphone.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
