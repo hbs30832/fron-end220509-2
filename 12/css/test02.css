@@ -1,0 +1,118 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  /* text-align: center; */
+  background-color: #888;
+}
+.header .nav {
+  /* display: inline-block; */
+  width: 500px;
+  margin: 0 auto;
+  background-color: #999;
+  font-size: 0;
+}
+.header .nav li {
+  /* 글씨는 기본적으로 4px? margin 적용되어 있다. */
+  display: inline-block;
+  /* float: left; */
+  /* inline-block과 float 중첩사용하면 경고를 띄운다. */
+  width: 25%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.header .nav li a {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+}
+.header .nav li a:hover {
+  background-color: #aaaaaa;
+}
+
+.main {
+  text-align: center;
+  height: 100vh;
+}
+.main h2 {
+  font-size: 32px;
+  margin: 50px 0;
+  margin-bottom: 70px;
+}
+
+.main .yejiList ul {
+  display: inline-block;
+}
+
+.main .yejiList ul li {
+  width: 150px;
+  height: 170px;
+  float: left;
+}
+
+.main .yejiList ul li:nth-child(2) {
+  margin: 0 10px;
+}
+
+.main .yejiList ul li a {
+  display: block;
+  /* width: 100%; */
+  height: 100%;
+  background: url("../../yeji.jpeg") center / cover no-repeat;
+  /* background-size: cover; */
+}
+
+.main .yejiList ul li:nth-child(2) a {
+  background-image: url("../../yeji02.jpg");
+}
+
+.main .yejiList ul li:nth-child(3) a {
+  background-image: url("../../yeji03.png");
+}
+
+.main .yejiList ul li a:hover {
+  background-size: 120%;
+}
+
+.section {
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.section01 {
+  background-image: url("../../yeji.jpeg");
+}
+.section02 {
+  background-image: url("../../yeji03.png");
+}
+.section03 {
+  background-image: url("../../yeji04.jpg   ");
+}
+
+.background {
+  height: 500px;
+  background: url("../../yeji04.jpg") contain / no-repeat fixed;
+  /* background-size: contain; */
+  /* background-attachment: fixed; */
+  /* background-repeat: no-repeat; */
+  margin-bottom: 300px;
+}
+
+.background01 {
+  background-image: url("../../yeji04.jpg");
+  background-position: center;
+}
+
+.background02 {
+  background-image: url("../../yeji05.jpg");
+  background-position: left;
+}
+.background03 {
+  background-image: url("../../yeji06.png.crdownload");
+  background-position: right;
+  margin: 0;
+}

@@ -1,28 +1,21 @@
 body {
   height: 1500px;
 }
-
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(36, 130, 245);
-}
-
 .imgBackground {
-  /* width: 300px; */
-  height: 500px;
-  border: 10px solid rgba(0, 0, 0, 0.3);
-  background-image: url("../images/background.png");
-  color: #fff;
   padding: 20px;
-  margin-top: 200px;
-  /* background-size: contain; */
-  /* background-size: cover; */
-  background-size: 200px;
-  /* background-repeat: repeat;  패턴 배경화면에 */
+  height: 300px;
+  color: #fff;
+  background-image: url("../images/background.png");
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 50px solid rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  /* 이미지가 잘리지 않는선에서 가장 크게. (가로 세로 길이 중 짧은 길이에 맞춘다) */
   background-repeat: no-repeat;
-  background-position: left;
-  background-clip: padding-box;
-  background-clip: content-box;
-  background-attachment: fixed;
+  /*background-position: 10px;  수치를 하나만 입력하면 수평 위치로 간주하고 수직 위치는 center로 간주한다 */
+  /* background-attachment: fixed; */
+  /* background-clip: border-box; */
+  /* background-clip은 색상 */
+  background-origin: content-box;
+
+  /* background-orgin은 배경 이미지 */
 }

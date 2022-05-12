@@ -18,10 +18,12 @@
   width: 200px;
 }
 
+/* + : 인접 형제 선택. 바로 옆에 있는 형제 한개만! */
 .question h2 + p {
   color: red;
 }
 
+/* ~ :  일반 형제 선택자. 옆에 있는 형제 모두!*/
 .question h3 ~ p {
   color: red;
 }

@@ -7,6 +7,29 @@
     <link rel="stylesheet" href="../css/pseudo02.css" />
   </head>
   <body>
-    <a href="">예지</a>
+    <!-- <a href="">예지</a> -->
+    <div class="inner">
+      <!-- <p>예지는 이쁩니다.</p>
+      <p>예지는 춤도 잘 춥니다.</p>
+      <p>예지는 이쁩니다.</p>
+      <p>예지는 춤도 잘 춥니다.</p>
+      <p>예지는 이쁩니다.</p>
+      <p>예지는 춤도 잘 춥니다.</p> -->
+      <!-- + : 인접 형제 요소. -->
+      <!-- 
+        input 체크 => input[type="checkbox"]:checked => 이렇게만 접근하면 label color 변경 불가능.
+        => +(인접 형제 선택자) 로 접근 가능.
+        => input[type="checkbox"]:checked + label로 접근 가능.
+       -->
+      <div class="checkboxWrapper">
+        <!-- <label for="apple"> 사과 </label> -->
+        <input type="checkbox" id="apple" />
+      </div>
+    </div>
+    <script>
+      document.addEventListener("mousemove", function (e) {
+        console.log(e);
+      });
+    </script>
   </body>
 </html>
