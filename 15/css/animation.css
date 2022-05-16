@@ -1,0 +1,29 @@
+.container {
+  width: 500px;
+  height: 300px;
+  background-color: #999;
+  margin: 100px auto 0;
+  perspective: 300px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  animation-name: moveRight;
+  animation-duration: 2s;
+  /* animation-delay: 2s; */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+  position: relative;
+}
+
+@keyframes moveRight {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(180deg);
+  }
+}

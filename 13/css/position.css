@@ -1,0 +1,25 @@
+.container {
+  width: 1000px;
+  height: 1000px;
+  background-color: #bbb;
+  /* 16진수 : 0 ~ f => 0123456789abcdef*/
+  position: relative;
+}
+.inner {
+  width: 500px;
+  height: 300px;
+  background-color: #999;
+  top: 100px;
+}
+
+.box {
+  /* position: static; 기본값. 문서의 원래 흐름에 위치. 이동 x */
+  /* position: relative; static과 같이 원래 흐름에 위치(기준). 이동 o. */
+  /* position: fixed; */
+  position: sticky;
+  width: 100px;
+  height: 100px;
+  background-color: #777;
+  /* top: 100px; */
+  /* bottom: 0; */
+}

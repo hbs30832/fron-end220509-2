@@ -1,0 +1,356 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: #24292f;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+header .headerLeft {
+  display: flex;
+  align-items: center;
+}
+header .headerLeft .logo a svg {
+  fill: #fff;
+}
+header .headerLeft .logo a:hover svg {
+  fill: rgba(255, 255, 255, 0.7);
+}
+header .headerLeft .inputBox {
+  border: 1px solid #57606a;
+  border-radius: 4px;
+  padding: 5px 5px 5px 10px;
+  margin: 0 16px;
+}
+
+header .headerLeft .inputBox span {
+  display: inline-block;
+  border: 1px solid #57606a;
+  /* box-sizing: content-box; */
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  line-height: 20px;
+  color: #57606a;
+  text-align: center;
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+header .headerLeft .inputBox:focus-within span {
+  transition-delay: 0s;
+  opacity: 0;
+}
+header .headerLeft .inputBox input {
+  width: 200px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  transition: 0.1s linear;
+}
+
+header .headerLeft .inputBox {
+  transition: 0.1s;
+  transition-timing-function: linear;
+  transition-delay: 0.2s;
+}
+header .headerLeft .inputBox:focus-within {
+  transition-delay: 0s;
+  background-color: #fff;
+}
+
+header .headerLeft .inputBox input:focus {
+  width: 400px;
+  color: #000;
+}
+
+header .headerLeft .inputBox input:focus + span {
+  /* visibility: hidden; */
+}
+
+header .headerLeft nav ul {
+  display: flex;
+}
+header .headerLeft nav ul li {
+  color: #fff;
+  font-weight: 700;
+}
+
+header .headerLeft nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+header .headerLeft nav ul li + li {
+  margin-left: 10px;
+}
+header .headerRight {
+  display: flex;
+  align-items: center;
+}
+header .headerRight ul {
+  display: flex;
+  align-items: center;
+}
+
+header .headerRight ul li a svg {
+  fill: #fff;
+}
+
+header .headerRight ul li a img {
+  width: 20px;
+  border-radius: 50%;
+}
+
+header .headerRight ul li + li {
+  margin-left: 10px;
+}
+
+header .headerRight ul li {
+  position: relative;
+}
+header .headerRight ul li:nth-child(2) {
+  padding-right: 12px;
+}
+
+header .headerRight ul li:nth-child(2)::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: 4px solid #fff;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 0;
+  margin-top: 1px;
+}
+
+header .headerRight ul li:nth-child(3)::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgb(59, 59, 255);
+  border: 1px solid #24292f;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: stretch;
+}
+
+.container aside {
+  flex-basis: 300px;
+  padding: 0 32px;
+  border-right: 1px solid hsla(210, 18%, 87%, 1);
+}
+
+.container aside .titleBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0 10px;
+}
+
+.container aside .titleBox h3 {
+  font-weight: 700;
+  font-size: 14px;
+}
+.container aside .titleBox a {
+  display: flex;
+  align-items: center;
+  background-color: #2da44e;
+  border: 1px solid rgba(27, 31, 36, 0.15);
+  padding: 5px 15px;
+  border-radius: 4px;
+  color: #fff;
+  fill: #fff;
+}
+
+.container aside .titleBox a span {
+  font-weight: 700;
+  font-size: 12px;
+  margin-left: 5px;
+}
+.container aside .inputBox {
+  padding: 5px 10px;
+  border: 1px solid #d0d7de;
+  border-radius: 4px;
+  background-color: #f6f8fa;
+}
+
+.container aside .inputBox:focus-within {
+  background-color: #fff;
+}
+.container aside .inputBox input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+.container aside .repositoryList {
+  padding: 15px 0;
+  border-bottom: 1px solid #d0d7de;
+}
+
+.container aside .repositoryList li {
+  padding: 5px 0;
+  font-size: 14px;
+}
+.container aside .repositoryList li a {
+  display: flex;
+  align-items: center;
+}
+
+.container aside .repositoryList li a:hover {
+  text-decoration: underline;
+}
+
+.container aside .repositoryList li a img {
+  width: 20px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.container aside .descriptionBox {
+  margin-top: 10px;
+}
+.container aside .descriptionBox p {
+  line-height: 1.6em;
+  font-size: 12px;
+  color: #57606a;
+}
+
+.container main {
+  flex: 1;
+  background-color: #f6f8fa;
+  padding: 0 32px;
+}
+
+.container main .tabList {
+  margin-top: 16px;
+  border-bottom: 1px solid #d0d7de;
+  /* padding-bottom: 10px;   */
+}
+
+.container main .tabList ul {
+  display: flex;
+}
+
+.container main .tabList ul li {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  position: relative;
+}
+
+.container main .tabList ul li button {
+  border: none;
+  height: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 7px 10px;
+}
+
+.container main .tabList ul li.active button {
+  background-color: rgba(208, 215, 222, 0.32);
+}
+
+.container main .tabList ul li.active::after {
+  position: absolute;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #fd8c73;
+  bottom: -1px;
+  border-radius: 50%;
+}
+.container main .tabList ul li button:hover {
+  background-color: rgba(208, 215, 222, 0.32);
+}
+
+.container main .tabList ul li + li {
+  margin-left: 10px;
+}
+
+.container main .tabList ul li:nth-child(2) button::after {
+  display: inline-block;
+  content: "Beta";
+  color: #1a7f37;
+  padding: 2px 3px;
+  margin-left: 5px;
+  font-size: 12px;
+  border-radius: 15px;
+  font-weight: 700;
+  border: 1px solid #1a7f37;
+}
+
+/* 소개글 */
+.container main .introduceBox {
+  margin-top: 10px;
+  padding: 16px;
+  border: 1px solid #d0d7de;
+  border-radius: 10px;
+
+  background-color: #fff;
+}
+
+.container main .introduceBox .descriptionBox h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.container main .introduceBox .codeBox {
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+.container main .introduceBox .codeBox .codeTitle {
+  padding: 16px;
+  border-bottom: 1px solid #d0d7de;
+}
+
+.container main .introduceBox .codeBox ol {
+  padding: 16px;
+  background-color: #f6f8fa;
+}
+
+.container main .introduceBox .codeBox ol li {
+  padding: 5px 0;
+  font-size: 12px;
+}
+.container main .introduceBox .codeBox .btns {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px;
+}
+
+.container main .introduceBox .codeBox .btns li a {
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.container main .introduceBox .codeBox .btns li:nth-child(2) {
+  margin-left: 10px;
+}
+.container main .introduceBox .codeBox .btns li:nth-child(2) a {
+  background-color: #2da44e;
+  color: #fff;
+}

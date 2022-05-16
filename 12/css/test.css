@@ -6,6 +6,9 @@
   font-style: normal;
 }
 
+body {
+  /* overflow: hidden; */
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -15,88 +18,86 @@ a {
   content: "";
   clear: both;
 }
-
-body {
-  padding-bottom: 550px;
-}
-.header {
+header {
   background-color: #888;
+  display: flex;
+  justify-content: center;
 }
 
-.header ul {
-  width: 500px;
-  margin: 0 auto;
-  /* background-color: #777; */
-  /* font-size: 0; */
+header ul {
+  display: flex;
 }
 
-.header ul li {
-  /* float: left; */
-  display: inline-block;
+header ul li {
+  width: 100px;
+  font-size: 16px;
+}
+
+header ul li a {
+  /* display: inline-block; */
+  display: block;
   text-align: center;
-  width: 24%;
-  /* font-size: 20px; */
-}
-
-.header ul li a {
-  display: inline-block;
-  width: 100%;
+  /* width: 100%; */
   padding: 10px 0;
   font-family: "SuseongDotum";
   color: #fff;
   background-color: #333;
+  /* transition-property: background-color; */
+  /* transition-duration : 0.5s */
+  transition: background-color 0.5s;
 }
-.header ul li a:hover {
+header ul li a:hover {
   background-color: #999;
+  color: tomato;
 }
-.header ul li a:active {
+header ul li a:active {
   background-color: #666;
 }
 
-.main {
+main {
   text-align: center;
 }
 
-.main h2 {
+main h2 {
   font-size: 32px;
   margin: 50px 0 70px;
   font-family: "SuseongDotum";
 }
 
-.main ul {
-  display: inline-block;
+main ul {
+  display: flex;
+  justify-content: center;
 }
 
-.main ul li {
+main ul li {
   width: 150px;
   height: 170px;
-  float: left;
-  /* display: inline-block; */
   overflow: hidden;
 }
 
-.main ul li:nth-child(2) {
+main ul li:nth-child(2) {
   margin: 0 20px;
 }
 
-.main ul li a {
+main ul li a {
   display: block;
   height: 100%;
   background-size: 100%;
   background-position: center;
+  transition: all 0.25s;
 }
 
-.main ul li:nth-child(1) a {
+main ul li:nth-child(1) a {
   background-image: url("../../yeji02.jpg");
 }
-.main ul li:nth-child(2) a {
+main ul li:nth-child(2) a {
   background-image: url("../../yeji.jpeg");
 }
-.main ul li:nth-child(3) a {
+main ul li:nth-child(3) a {
   background-image: url("../../yeji03.png");
 }
 
-.main ul li a:hover {
+main ul li a:hover {
   background-size: 110%;
 }
 
@@ -105,7 +106,6 @@ body {
   height: 500px;
   background: url("../../yeji04.jpg") center / contain no-repeat;
   background-attachment: fixed;
-  background-color: #999;
 }
 
 .background02 {
@@ -116,4 +116,101 @@ body {
 .background03 {
   background-image: url("../../yeji06.png.crdownload");
   background-position: right;
+}
+
+.btnChat {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 50px;
+  right: 20px;
+}
+
+.btnChat a img {
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.25s 0.25s;
+}
+
+.btnChat a img:nth-child(1) {
+  opacity: 0;
+}
+
+.btnChat a:hover img:nth-child(1) {
+  opacity: 1;
+}
+
+.btnChat a:hover img:nth-child(2) {
+  opacity: 0;
+}
+
+.popupBg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  display: none;
+}
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translateX(-50%); */
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 500px;
+  border: 1px solid #888;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.popup h2 {
+  font-size: 10px;
+  border-bottom: 1px solid #888;
+  padding: 10px;
+}
+
+.popup p {
+  font-size: 12px;
+  padding: 10px;
+}
+
+.popup svg {
+  position: absolute;
+  /* left: -1000px; */
+  bottom: -60px;
+  animation-name: wave;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  opacity: 0.7;
+  /* animation-play-state: paused; */
+}
+.popup svg:nth-child(3) {
+  animation-direction: alternate-reverse;
+}
+
+#wrapper {
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid #888;
+}
+
+#wrapper p {
+  padding: 10px;
+  border: 1px solid #666;
+}
+
+@keyframes wave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-800px);
+  }
 }

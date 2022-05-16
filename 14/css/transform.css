@@ -1,0 +1,79 @@
+body {
+  padding: 50px;
+}
+
+.container {
+  margin-bottom: 30px;
+  /* perspective : 원금감. 3d로 표현하고자 하는 요소의 부모 요소에 입력. */
+  perspective: 1000px;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #888;
+  text-align: center;
+  line-height: 100px;
+}
+
+.translate .box:hover {
+  /* 1) translate : 요소를 x,y축 방향으로 이동시킨다. => 음수를 넣으면 반대로 작동.*/
+  transform: translateX(-30px);
+  transform: translateY(30px);
+  transform: translate(30px, -30px);
+  transform: translateZ(-500px);
+}
+
+.scale .box:hover {
+  /* 
+    2) scale
+     - 요소를 x,y축 방향으로 확대 혹은 축소시킨다. 안의 요소도 같이 확대, 축소. 
+     - 축소는 음수가 아니라 비율로 작성해야 한다. 
+     - scale() 사용시 값을 1개만 넣으면 x,y축이 같은 비율로 확대 혹은 축소된다.
+       => 2개를 각각 값에 따라 변형된다. 
+     - 길이가 변하는게 아니라 안의 컨텐츠까지 영향.
+  */
+  transform: scaleX(110%);
+  transform: scaleY(0.9);
+  transform: scale(1.1);
+  /* transform: scaleZ(-2); */
+}
+
+.rotate .box:hover {
+  /* 
+    3) rotate
+    - 요소를 회전시킨다.
+    => 양수를 넣으면 시계방향, 음수를 넣으면 반시계 방향으로 회전한다.
+    - ratateX(), rotateY()는 3차원 변형에서 사용한다.
+    => perspective 속성을 사용해야 제대로 작동.
+    */
+
+  transform: rotate(-45deg);
+  transform: rotateX(60deg);
+  transform: rotateY(180deg);
+}
+
+.skew .box:hover {
+  /* 
+        3) skew 
+          - 요소를 x,y축으로 왜곡시킨다.
+    
+    */
+  transform: skewX(30deg);
+  transform: skewY(30deg);
+  transform: skew(30deg, 30deg);
+  /* transform: skewZ(30deg); */
+}
+
+.transition .box {
+  transition-duration: 3s; /* 트랜지션을 실행할 시간. */
+  transition-property: width, height; /* 트래지션을 적용할 속성을 선택. 기본값 all */
+  transition-timing-function: ease-in; /* 트랜지션 실행 형태를 지정. cubic-bezier로 커스텀 가능. */
+  transition: all ease-in 0.25s 1s;
+}
+
+.transition .box:hover {
+  width: 300px;
+  background: black;
+  /* height: 150px; */
+  transition-delay: 1s; /* 트랜지션의 지연시간을 지정. => 지연시간 이후에 트래지션 작동. */
+}
