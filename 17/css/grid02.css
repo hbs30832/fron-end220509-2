@@ -1,0 +1,14 @@
+.container {
+  height: 600px;
+  background-color: #bbb;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 400px));
+}
+
+.box:nth-child(odd) {
+  background-color: aquamarine;
+}
+
+.box:nth-child(even) {
+  background-color: tomato;
+}

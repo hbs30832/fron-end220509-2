@@ -2,12 +2,27 @@ a {
   text-decoration: none;
   color: inherit;
 }
+@media screen and (max-width: 768px) {
+  .changeBox {
+    display: none;
+  }
+}
 
+@media screen and (min-width: 769px) {
+  .changeBox {
+    display: block;
+  }
+}
+
+.wrapper {
+  display: grid;
+}
 header {
   background-color: #24292f;
   padding: 16px 32px;
   display: flex;
   justify-content: space-between;
+  grid-area: header;
 }
 
 header .headerLeft {
@@ -147,15 +162,23 @@ header .headerRight ul li:nth-child(3)::after {
 }
 
 .container {
-  display: flex;
+  display: grid;
   height: 100vh;
   align-items: stretch;
+  background-color: #f6f8fa;
+  grid-template-rows: 60px 1fr 1fr;
+  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template-areas:
+    "header header header"
+    "aside main right"
+    "aside main right";
 }
 
 .container aside {
-  flex-basis: 300px;
   padding: 0 32px;
   border-right: 1px solid hsla(210, 18%, 87%, 1);
+  background-color: #fff;
+  grid-area: aside;
 }
 
 .container aside .titleBox {
@@ -234,10 +257,13 @@ header .headerRight ul li:nth-child(3)::after {
   color: #57606a;
 }
 
-.container main {
-  flex: 1;
-  background-color: #f6f8fa;
+.container .center {
   padding: 0 32px;
+  grid-area: main;
+}
+/* main */
+.container main {
+  margin-bottom: 20px;
 }
 
 .container main .tabList {
@@ -251,9 +277,9 @@ header .headerRight ul li:nth-child(3)::after {
 }
 
 .container main .tabList ul li {
-  display: flex;
-  align-items: center;
-  height: 50px;
+  /* display: flex;
+  align-items: center; */
+  /* height: 40px; */
   position: relative;
 }
 
@@ -271,7 +297,7 @@ header .headerRight ul li:nth-child(3)::after {
   background-color: rgba(208, 215, 222, 0.32);
 }
 
-.container main .tabList ul li.active::after {
+/* .container main .tabList ul li.active::after {
   position: absolute;
   display: block;
   content: "";
@@ -279,8 +305,19 @@ header .headerRight ul li:nth-child(3)::after {
   width: 100%;
   background-color: #fd8c73;
   bottom: -1px;
-  border-radius: 50%;
+  border-radius: 1px;
+} */
+.container main .tabList ul li.active .underline {
+  display: block;
 }
+.container main .tabList ul li .underline {
+  display: none;
+  height: 2px;
+  background-color: #fd8c73;
+  margin-top: 10px;
+  margin-bottom: -1px;
+}
+
 .container main .tabList ul li button:hover {
   background-color: rgba(208, 215, 222, 0.32);
 }
@@ -353,4 +390,155 @@ header .headerRight ul li:nth-child(3)::after {
 .container main .introduceBox .codeBox .btns li:nth-child(2) a {
   background-color: #2da44e;
   color: #fff;
+}
+
+/* ProTip */
+.container main .tipBox {
+  margin-top: 30px;
+  /* line-height: 1.6em; */
+  font-size: 14px;
+}
+
+.container main .tipBox svg {
+  margin-right: 5px;
+}
+.container main .tipBox p {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.container main .tipBox p b {
+  font-weight: 700;
+  margin-right: 0.4em;
+}
+.container main .tipBox p a {
+  margin: 0 0.4em;
+  color: #0969da;
+}
+.container main .tipBox p a:hover {
+  text-decoration: underline;
+}
+
+.container main .tipBox > a {
+  display: flex;
+  align-items: center;
+}
+.container main .tipBox > a:hover {
+  color: #0969da;
+  text-decoration: underline;
+}
+
+/* footer */
+footer {
+  display: flex;
+}
+footer .leftContent {
+  font-size: 14px;
+  flex: 1;
+}
+footer .leftContent a {
+  display: flex;
+  align-items: center;
+  color: #57606a;
+}
+footer .leftContent a:hover {
+  color: #000;
+}
+footer .leftContent a:hover svg {
+  fill: #000;
+}
+footer .leftContent a svg {
+  width: 25px;
+  margin-right: 10px;
+  fill: #57606a;
+}
+footer .rightContent {
+  flex: 1;
+}
+footer .rightContent ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .rightContent ul li {
+  width: 120px;
+  padding: 5px 0;
+  color: #57606a;
+  font-size: 14px;
+}
+
+footer .rightContent ul li a:hover {
+  color: #0969da;
+  text-decoration: underline;
+}
+
+.container .changeBox {
+  grid-area: right;
+  padding: 0 20px;
+  padding-top: 32px;
+}
+
+.container .changeBox h3 {
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.container .changeBox .changeList {
+  /* border-left: 1px solid #000; */
+  padding-left: 30px;
+  width: 100%;
+  max-width: 350px;
+}
+.container .changeBox .changeList > a {
+  color: #57606a;
+  font-size: 12px;
+}
+.container .changeBox .changeList ul {
+  /* width: 100%; */
+}
+.container .changeBox .changeList ul li {
+  line-height: 1.2em;
+  padding-bottom: 20px;
+  position: relative;
+  /* width: 100%; */
+}
+.container .changeBox .changeList ul li:before {
+  width: 1px;
+  /* height: 100%; */
+  display: block;
+  background-color: #d0d7de;
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: -15px;
+  left: -30px;
+}
+.container .changeBox .changeList ul li:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #d0d7de;
+  top: 6px;
+  left: -33px;
+}
+.container .changeBox .changeList ul li span {
+  font-size: 12px;
+  color: #57606a;
+}
+.container .changeBox .changeList ul li a {
+  display: block;
+  font-size: 14px;
+  color: #24292f;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container .changeBox .changeList ul li a:hover {
+  color: #0969da;
+  text-decoration: underline;
 }
