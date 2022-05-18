@@ -1,0 +1,60 @@
+@media all and (max-width: 1000px) {
+  header {
+    height: 60px;
+  }
+  header ul {
+    flex-direction: column;
+    height: 60px;
+    overflow: hidden;
+  }
+  header ul:hover {
+    overflow: visible;
+    /* height: 320px; */
+  }
+  header ul li {
+    width: 400px;
+  }
+  header .btnSide {
+    display: flex;
+  }
+  main ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  main ul li {
+    width: 200px;
+    height: 300px;
+  }
+  /* main ul li a {
+    background-size: cover;
+  } */
+  main ul li + li {
+    margin-top: 10px;
+  }
+
+  main ul li:nth-child(2) {
+    margin-top: 10px;
+  }
+}
+/* 480 모바일 1080 태블릿 1440 이상 데스크탑 */
+/* @media (max-width: 480px) {
+  header {
+    background-color: red;
+  }
+}
+@media (min-width: 480px) and (max-width: 1080px) {
+  header {
+    background-color: blue;
+  }
+}
+@media (min-width: 1081px) and (max-width: 1440px) {
+  header {
+    background-color: aqua;
+  }
+}
+@media all and (min-width: 501px) {
+  header {
+    height: 100px;
+  }
+} */

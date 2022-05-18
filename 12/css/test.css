@@ -6,9 +6,6 @@
   font-style: normal;
 }
 
-body {
-  /* overflow: hidden; */
-}
 a {
   color: inherit;
   text-decoration: none;
@@ -22,28 +19,49 @@ header {
   background-color: #888;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+header .btnSide {
+  height: 100%;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 30px;
+  padding: 0 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+header .btnSide span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+header .btnSide span:nth-child(2) {
+  margin: 5px 0;
 }
 
 header ul {
   display: flex;
+  height: 60px;
 }
 
 header ul li {
-  width: 100px;
+  width: 200px;
   font-size: 16px;
 }
 
 header ul li a {
-  /* display: inline-block; */
   display: block;
   text-align: center;
-  /* width: 100%; */
-  padding: 10px 0;
+  height: 60px;
+  line-height: 60px;
   font-family: "SuseongDotum";
+  font-size: 30px;
   color: #fff;
   background-color: #333;
-  /* transition-property: background-color; */
-  /* transition-duration : 0.5s */
   transition: background-color 0.5s;
 }
 header ul li a:hover {
@@ -54,14 +72,9 @@ header ul li a:active {
   background-color: #666;
 }
 
-main {
-  text-align: center;
-}
-
 main h2 {
-  font-size: 32px;
-  margin: 50px 0 70px;
-  font-family: "SuseongDotum";
+  text-align: center;
+  margin: 100px 0 70px;
 }
 
 main ul {
@@ -70,8 +83,8 @@ main ul {
 }
 
 main ul li {
-  width: 150px;
-  height: 170px;
+  width: 300px;
+  height: 450px;
   overflow: hidden;
 }
 
@@ -82,7 +95,7 @@ main ul li:nth-child(2) {
 main ul li a {
   display: block;
   height: 100%;
-  background-size: 100%;
+  background-size: 120%;
   background-position: center;
   transition: all 0.25s;
 }
@@ -98,24 +111,24 @@ main ul li:nth-child(3) a {
 }
 
 main ul li a:hover {
-  background-size: 110%;
+  background-size: 130%;
 }
 
 .background {
   margin-top: 200px;
-  height: 500px;
-  background: url("../../yeji04.jpg") center / contain no-repeat;
+  height: 100vh;
+  background: url("../../yeji04.jpg") center / auto 100vh no-repeat;
   background-attachment: fixed;
 }
 
 .background02 {
   background-image: url("../../yeji05.jpg");
-  background-position: left;
+  background-position: left bottom;
 }
 
 .background03 {
-  background-image: url("../../yeji06.png.crdownload");
-  background-position: right;
+  background-image: url("../../yeji07.png");
+  background-position: right bottom;
 }
 
 .btnChat {
