@@ -47,6 +47,9 @@ header ul {
   display: flex;
   height: 60px;
 }
+header ul.active {
+  overflow: visible;
+}
 
 header ul li {
   width: 200px;
@@ -101,13 +104,13 @@ main ul li a {
 }
 
 main ul li:nth-child(1) a {
-  background-image: url("../../yeji02.jpg");
+  background-image: url("../../images/yeji02.jpg");
 }
 main ul li:nth-child(2) a {
-  background-image: url("../../yeji.jpeg");
+  background-image: url("../../images/yeji.jpeg");
 }
 main ul li:nth-child(3) a {
-  background-image: url("../../yeji03.png");
+  background-image: url("../../images/yeji03.png");
 }
 
 main ul li a:hover {
@@ -117,17 +120,17 @@ main ul li a:hover {
 .background {
   margin-top: 200px;
   height: 100vh;
-  background: url("../../yeji04.jpg") center / auto 100vh no-repeat;
+  background: url("../../images/yeji04.jpg") center / auto 100vh no-repeat;
   background-attachment: fixed;
 }
 
 .background02 {
-  background-image: url("../../yeji05.jpg");
+  background-image: url("../../images/yeji05.jpg");
   background-position: left bottom;
 }
 
 .background03 {
-  background-image: url("../../yeji07.png");
+  background-image: url("../../images/yeji07.png");
   background-position: right bottom;
 }
 

@@ -42,8 +42,8 @@ console.log("========비교 연산자========");
 console.log("3 == 2", 3 == 2);
 console.log('3 == "3"', 3 == "3");
 console.log('3 === "3"', 3 === "3");
-console.log('3 != "3"', 3 != "3");
-console.log('3 !== "3"', 3 !== "3");
+console.log('3 != "3"', 3 != "3"); // false
+console.log('3 !== "3"', 3 !== "3"); // true
 console.log("3 > 2 + 2", 3 > 2 + 2);
 console.log("3 < 4", 3 < 4);
 console.log("3 >= 3", 3 >= 3);
@@ -56,4 +56,4 @@ console.log("!true", !true);
 console.log(true && true);
 console.log(3 > 2 && 4 > 2 * 3);
 console.log(3 < 4 && !(3 > 2 + 5));
-console.log(true || false);
+console.log(false || true);
