@@ -38,8 +38,8 @@ func3();
 // func3();
 
 // 매개 변수(parameter)
-// 함수 안에서 사용할 수 있는 변수 => 함수를 실행할 때 () 안에 입력.
-// 실제로 변수에 입력되는 값 => 인자(argument).
+// 함수 안에서 사용할 수 있는 값 => 함수를 실행할 때 () 안에 입력.
+// 실제로 매개 변수에 입력되는 값 => 인자(argument).
 // 매개 변수는 원하는 만큼 선언. => 매개 변수와 인자의 개수가 달라도 오류 발생 x.
 // (a = 3) => 매개 변수 a에 입력하지 않았을 때 기본값 3으로 사용.
 
@@ -114,3 +114,65 @@ resultNum();
 resultNum();
 resultNum();
 resultNum();
+
+function double(a) {
+  var varNum = 2;
+  return a * varNum;
+}
+if (true) {
+  let firstNum = 1;
+  var secondNum = 2;
+}
+
+let user = {
+  firstName: "Seok",
+  lsatName: "Hwangbo",
+
+  get fullName() {
+    return `${this.lsatName} ${this.firstName}`;
+  },
+
+  set fullName(value) {
+    [this.lsatName, this.firstName] = value.split(" ");
+  },
+};
+
+console.log(user.fullName);
+user.fullName = "Kim Jeongcheol";
+
+class User {
+  constructor(firstName, lsatName) {
+    this.firstName = firstName;
+    this.lsatName = lsatName;
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lsatName}`;
+  }
+
+  set fullName(value) {
+    [this.firstName, this.lsatName] = value.split(" ");
+  }
+}
+
+let newUser = new User("Gwanhoon", "kim");
+
+console.log(newUser.fullName);
+newUser.fullName = "Seok hwangbo";
+console.log(newUser.fullName);
+
+let ObjectLikeArray = function (...rest) {
+  this.length = rest.length;
+  for (let i = 0; i < rest.length; i++) {
+    this[i] = rest[i];
+  }
+};
+
+let objLikeArray = new ObjectLikeArray(1, 2, 3, 4, 5);
+console.log(objLikeArray);
+
+console.log(Object.getOwnPropertyDescriptors(objLikeArray));
+
+for (let key in objLikeArray) {
+  console.log(objLikeArray[key]);
+}
