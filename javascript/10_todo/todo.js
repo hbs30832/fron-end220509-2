@@ -1,22 +1,66 @@
 let inputText = document.querySelector("#inputText");
 let btnSubmit = document.querySelector(".btnSubmit");
 let todoList = document.querySelector(".todoList");
-let todos = document.querySelectorAll(".todoList li");
+let todos;
 
 // 버튼 클릭 감지!
 
 let todoArr = JSON.parse(localStorage.getItem("todoArr"));
+// [
+//   {
+//     id: 1,
+//     text: "sdfjksljf",
+//   },
+// ];
 
-console.log(todoArr);
+// dataset => 개발자가 넣고 싶은 속성을 태그에 넣을 수 있다. => 권장. 표준.
+// data라는 접두사 뒤에 -로 단어를 구분해서 속성명을 짓는다. => ex) <li data-todo-id>내용</li>
+// 읽을 때는 카멜케이스로 읽는다. => todoId
+
+// submit => 화면에 출력할 데이터를 추가. =>  render() => 배열에서 값을 읽어서 li 태그로 화면에 출력.
 
 function render02() {
+  let todoListStr = "";
   todoArr.forEach(function (todo) {
     console.log(todo.text);
-    todoList.innerHTML += `<li>${todo.text}</li>`;
+    todoListStr += `<li data-todo-id=${todo.id}>${todo.text}</li>`;
   });
+  console.log(todoListStr);
+  todoList.innerHTML = todoListStr;
+
+  // 쓰레기 코드. => 출력할 때마다 출력한 li 읽어온다.
+  // => 읽어올 때마다 이벤트 리스너를 추가. => 수십, 수백개가 되면 문제가 많다.
+
+  // todos = document.querySelectorAll(".todoList li");
+
+  // todos.forEach((item) => {
+  //   item.addEventListener("click", function (e) {
+  //     let todoId = Number(e.target.dataset.todoId);
+  //     todoArr = todoArr.filter((item) => {
+  //       return item.id !== todoId;
+  //     });
+  //     render02();
+  //     // console.log(this.dataset.todoId);
+  //   });
+  // });
 }
-render();
-console.log(render02);
+
+// e.target => 현재 이벤트의 대상.
+// 이벤트 위임.
+
+todoList.addEventListener("click", function (e) {
+  // console.log(e.target.dataset.todoId);
+  if (e.target.matches(".todoList li")) {
+    console.dir(e.target);
+    let todoId = Number(e.target.dataset.todoId);
+    todoArr = todoArr.filter((item) => {
+      return item.id !== todoId;
+    });
+  }
+  render02();
+});
+
+render02();
 
 inputText.addEventListener("keydown", function (e) {
   if (e.code === "Enter") {
@@ -25,18 +69,21 @@ inputText.addEventListener("keydown", function (e) {
 });
 
 btnSubmit.addEventListener("click", () => {
+  console.log(btnSubmit.dataset.buttonId);
   submit();
 });
 
 function submit() {
+  let currentId = todoArr[todoArr.length - 1].id;
+
   todoArr.push({
-    id: todoArr[todoArr.length - 1].id + 1,
+    id: currentId + 1,
     text: inputText.value,
   });
   let todoArrJson = JSON.stringify(todoArr);
   localStorage.setItem("todoArr", todoArrJson);
 
-  render();
+  render02();
 }
 
 function render() {
@@ -103,7 +150,6 @@ localStorage.removeItem("isSaved");
 console.log(todoArrJson);
 
 console.log(btnSubmit.dataset.buttonId);
-
 //  버블링, 캡처링, 이벤트 위임
 
 // [1,2,3,4,5] => localStorage에서 다시 읽어올 대 데이터를 제대로 사용 x.

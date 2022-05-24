@@ -1,0 +1,159 @@
+body {
+  font-family: Roboto, "Noto Sans KR";
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background-color: #000;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header .logo {
+  width: 1180px;
+}
+
+main {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f6f7;
+}
+
+main .container {
+  display: flex;
+  width: 1180px;
+  height: 580px;
+  background-color: #fff;
+}
+main .container .contentBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .container .leftContent .titleBox {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+main .container .leftContent h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+main .container .leftContent .successText {
+  display: none;
+}
+
+main .container .leftContent .titleBox p {
+  font-size: 15px;
+}
+main .container .leftContent form {
+  text-align: center;
+  padding: 0 120px;
+}
+main .container .leftContent form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 10px;
+  border: 1px solid #ccc;
+}
+main .container .leftContent form input + input {
+  margin-top: 10px;
+}
+main .container .leftContent form button {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+main .container .leftContent .accountBtns {
+  margin-top: 30px;
+}
+main .container .leftContent .accountBtns a {
+  padding: 0 20px;
+}
+main .container .leftContent .accountBtns a:nth-child(2) {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+main .container .rightContent p {
+  font-size: 18px;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #f5f6f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+
+footer .footerBtns {
+  width: 1180px;
+  padding: 15px 0;
+}
+footer .footerBtns a + a {
+  margin-left: 60px;
+}
+
+footer .footerBottom {
+  border-top: 1px solid #ccc;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+footer .footerBottom .wrapper {
+  width: 1180px;
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footerBottom .wrapper .leftContent {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+footer .footerBottom .wrapper .leftContent .imgBox {
+  margin-right: 30px;
+}
+footer .footerBottom .wrapper .leftContent address dl {
+  display: flex;
+  line-height: 1.4em;
+}
+footer .footerBottom .wrapper .leftContent address p {
+  margin-top: 20px;
+}
+footer .footerBottom .wrapper .rightContent h4 {
+  font-weight: 500;
+  margin-bottom: 25px;
+  font-size: 17px;
+}
+footer .footerBottom .wrapper .rightContent p {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+footer .footerBottom .wrapper .rightContent p span {
+  display: inline-block;
+  width: 70px;
+  font-weight: 500;
+}

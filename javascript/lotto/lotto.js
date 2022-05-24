@@ -25,3 +25,35 @@ console.log(result);
 console.log(selectedNum);
 
 // 배열 관련 함수. => forEach, map, filter
+
+let arr = [
+  { id: 3, text: "HTML" },
+  { id: 5, text: "CSS" },
+  { id: 2, text: "JS" },
+  { id: 7, text: "React" },
+];
+console.log(arr);
+
+// 배열함수로 id:3 아이템 빼고 남겨주세요. 골라내는 함수. 구글링 ok.
+// 2
+
+// filter 함수는 return 값이 true인 값만 모아서 배열로 반환. => return boolean값이여야 한다.
+// 화살표 함수는 {}(코드블록) 생략시 바로 값을 return.
+
+// let resultArr = arr.filter((item) => item.id !== 2); 아래 코드와 동일하게 동작.
+let resultArr = arr.filter(function (item) {
+  return item.id !== 2;
+});
+console.log(resultArr);
+
+const sum = (a, b) => a + b;
+console.log(sum(1, 2));
+
+// 원시값 => 숫자, 문자, 불리언 등 변하지 않는 값.
+// 참조값 => 값을 변경 참조하는 주소가 변경.
+
+let obj = { name: "seok" };
+let copyObj = obj;
+copyObj.name = "hwangbo";
+
+console.log(obj, copyObj);
