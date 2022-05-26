@@ -1,0 +1,32 @@
+.container {
+  width: 1000px;
+  height: 500px;
+  margin: 100px auto 0;
+  display: flex;
+
+  background-color: #e8e8e8;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.box.blue {
+  background-color: blue;
+}
+
+.box:nth-child(2) {
+  margin: 0 10px;
+}
+
+.todo {
+  cursor: pointer;
+}
+.todo.active {
+  color: green;
+}

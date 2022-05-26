@@ -60,35 +60,89 @@ console.log(window.name);
 
 obj03.introduce();
 
-// class는 prototype의 문법적 설탕.
-class Human {
-  constructor(name, age) {
-    //  값 초기화
-    this.name = name;
+// 리액트 => 함수형 컴포넌트, 클래스형 컴포넌트
+
+function Rect(width, height) {
+  this.width = width;
+  this.height = height;
+}
+
+// prototype에 함수를 추가하면 앞으로 생성될 인스턴스가 사용.
+// => 생성자 함수가 실행 x.
+Rect.prototype.getArea = function () {
+  return this.width * this.height;
+};
+
+// Rect.getArea();
+
+const rect = new Rect(10, 10);
+console.log(rect.getArea());
+
+// class는 prototype의 문법적 설탕. => 생성자 함수와 마찬가지로 인스턴스를 만드는 설계도.
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+  // 인스턴스가 사용할 함수. => 일반적인 함수와 function 키워드를 사용하지 않는다.
+  // 이렇게 함수를 작성하면 prototype에 추가.
+  getArea() {
+    return this.width * this.height;
+  }
+
+  // static : 클래스에서 직접 사용하는 메서드(함수)와 프로퍼티(값). => 인스턴스에서 사용 불가.
+  static type = "사각형";
+  static getType() {
+    console.log("사각형입니다.");
+  }
+}
+
+console.log(Rectangle.type);
+
+const rectByClass = new Rectangle(20, 20);
+console.log(rectByClass);
+Rectangle.getType();
+
+// 클래스 상속
+class Animal {
+  constructor(legs, speed) {
+    this.legs = legs;
+    this.speed = speed;
+  }
+
+  move() {
+    console.log(`${this.speed}km/h로 움직입니다.`);
+  }
+}
+
+// Dog클래스가 Aniaml 클래스를 상속 받음. => extends 상속받을 클래스명.
+class Dog extends Animal {
+  // constructor를 생략하면 상위 클래스의 constructor를 실행.
+  // 프로퍼티를 추가하고 싶으면 constructor 내부에서 super() 실행.
+  // => constructor에 기존 상위 클래스의 인자 + 서브클래스만의 인자를 받아야한다.
+  // => super(기존프로퍼티) + this.새로운프로퍼티 = 서브클래스만의 인자.
+  constructor(legs, speed, age) {
+    // super : 상위 클래스의 constructor를 실행.
+    // super가 먼저 실행되어야한다.
+    super(legs, speed);
     this.age = age;
   }
-  // static => 인스턴스가 아닌 클래스에선 사용 가능.
-  static hello() {
-    console.log("정적 메서드입니다.");
+  bark() {
+    console.log("월!월!월!");
   }
-  static country = "korea";
-
-  // 클래스에서는 함수 키워드 사용 x.
-  // 인스턴스가 사용할 함수.
-  greeting() {
-    console.log(`${this.name}입니다.`);
+  // 오버라이딩 => 기존의 메서드명과 같은 메서드를 작성을 하면 덮어씌워진다.
+  // => Animal클래스의 move()를 덮어씌움.
+  move() {
+    console.log("어떻게 될까요?");
   }
 }
 
-class Korea extends Human {
-  constructor() {
-    super();
-  }
-}
+// class Human extends Animal {
+//   constructor;
+// }
 
-// 리액트 => 함수형 컴포넌트, 클래스형 컴포넌트.
-
-const human = new Human("seok", 30);
-Human.hello();
-console.log(Human.count);
-human.greeting();
+const animal = new Animal(2, 10);
+const dog = new Dog(4, 10, 2);
+console.log(dog);
+dog.move();
+dog.bark();
