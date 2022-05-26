@@ -6,6 +6,7 @@ a {
 header #gnb .gnbList {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   text-align: center;
 }
 
@@ -15,12 +16,18 @@ header #gnb .gnbList .depth01 > a {
 }
 
 header #gnb .gnbList .depth01:hover .depth02 {
-  opacity: 1;
+  /* opacity: 1; */
 }
-
+header #gnb .gnbList .depth02 {
+  /* opacity: 0; */
+  display: none;
+  /* transition: 0.4s; */
+}
+header #gnb .gnbList .depth02.hidden {
+  display: none;
+}
 header #gnb .gnbList .depth02 {
   border: 1px solid #e8e8e8;
-  display: none;
 }
 
 header #gnb .gnbList .depth02 li a {
