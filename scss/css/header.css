@@ -1,0 +1,46 @@
+header #gnb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header #gnb .gnbList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 36px;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background-color: #e8e8e8;
+}
+
+header #gnb .gnbList:hover {
+  height: 120px;
+}
+
+header #gnb .gnbList > li:hover {
+  background-color: #f1f1f1;
+}
+
+header #gnb .gnbList li {
+  text-align: center;
+}
+
+header #gnb .gnbList li .depth01 {
+  display: block;
+  padding: 10px 20px;
+}
+
+header #gnb .gnbList li .depth02 li:hover {
+  background-color: #b4b4b4;
+}
+
+header #gnb .gnbList li .depth02 li a {
+  display: block;
+  padding: 5px 0;
+}
+/*# sourceMappingURL=header.css.map */

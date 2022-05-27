@@ -14,14 +14,13 @@ header #gnb .gnbList .depth01 > a {
   display: block;
   padding: 20px;
 }
-
 header #gnb .gnbList .depth01:hover .depth02 {
   /* opacity: 1; */
 }
 header #gnb .gnbList .depth02 {
   /* opacity: 0; */
   display: none;
-  /* transition: 0.4s; */
+  transition: 0.4s;
 }
 header #gnb .gnbList .depth02.hidden {
   display: none;

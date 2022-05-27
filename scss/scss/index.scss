@@ -1,0 +1,27 @@
+// <header>
+//     <ul>
+//         <li>
+//             <span></span>
+//         </li>
+//         <li>
+//             <span></span>
+//         </li>
+//         <li>
+//             <span></span>
+//         </li>
+//     </ul>
+// </header>
+
+// header에 글씨 크기 24px, 색상 blue
+// ul flex, 가운데 정렬
+// li 글씨 가운데 정렬 => li호버시 span 사이즈 업
+// li 세번째거만 span 빨갛게
+// span 글씨 굵게 색상 green
+
+li {
+  &:hover {
+    span {
+      color: red;
+    }
+  }
+}

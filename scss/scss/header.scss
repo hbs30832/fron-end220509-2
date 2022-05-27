@@ -1,0 +1,40 @@
+// header #gnb .gnbList
+header {
+  #gnb {
+    display: flex;
+    justify-content: center;
+    .gnbList {
+      display: flex;
+      height: 36px;
+      overflow: hidden;
+      transition: 0.3s;
+      background-color: #e8e8e8;
+      &:hover {
+        height: 120px;
+      }
+      > li {
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+      li {
+        text-align: center;
+        .depth01 {
+          display: block;
+          padding: 10px 20px;
+        }
+        .depth02 {
+          li {
+            &:hover {
+              background-color: #b4b4b4;
+            }
+            a {
+              display: block;
+              padding: 5px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
