@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+    }
+    .item {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: 0.4s;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+    }
+    .item.active {
+      animation: fadeIn;
+      animation-fill-mode: forwards;
+      animation-duration: 0.4s;
+    }
+    button {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .textContainer {
+      display: inline-block;
+      position: relative;
+    }
+    .textContainer span {
+      opacity: 0;
+    }
+    .textContainer p {
+      position: absolute;
+      top: 0%;
+      left: 0;
+      display: inline-block;
+      animation: typing 10s;
+      animation-fill-mode: forwards;
+      width: 0;
+      overflow: hidden;
+      height: 20px;
+      word-break: break-all;
+    }
+    .textContainer p::after {
+      content: "";
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes typing {
+      to {
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <div style="font-size: 14px" class="textContainer">
+      <span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione
+        tempora ea in repudiandae magni tenetur aliquid expedita veniam sit!
+      </span>
+      <p class="first">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ratione
+        tempora ea in repudiandae magni tenetur aliquid expedita veniam sit!
+      </p>
+    </div>
+    <div style="font-size: 14px" class="textContainer">
+      <span> Lorem ipsum dolor sit amet </span>
+      <p class="second" style="animation-delay: 5s">Lorem ipsum dolor sit</p>
+    </div>
+
+    <script>
+      const items = document.querySelectorAll(".container .item");
+      const button = document.querySelector("button");
+      const pElementList = document.querySelectorAll("p");
+
+      pElementList.forEach((p) => {
+        p.style.animationTimingFunction = `steps(${p.innerText.length})`;
+        p.style.animationDuration = `${p.innerText.length * 0.05}s`;
+      });
+
+      window.onscroll = function () {};
+
+      window.addEventListener();
+
+      useEffect(() => {
+        window.addEventListener("wheel", add);
+        return () => {
+          window.removeEventListener("wheel", add);
+        };
+      }, []);
+
+      function add(e) {
+        return e;
+      }
+
+      let current = 0;
+      //   button.addEventListener("click", function (e) {
+      //     if (current < items.length - 1) {
+      //       ++current;
+      //       fade();
+      //     } else {
+      //       current = 0;
+      //       fade();
+      //     }
+      //   });
+
+      function fade() {
+        items.forEach((item, idx) => {
+          if (idx === current) item.classList.add("active");
+          else item.classList.remove("active");
+        });
+      }
+
+      const [sectionList, setSectionList] = useState([]);
+      const [currentSection, setCurrentSection] = useState(1);
+
+      useEffect(() => {
+        window.scrollTo({
+          top: currentSection * window.innerHeight,
+          behavior: "smooth",
+        });
+      }, [currentSection]);
+
+      function changeSection() {
+        if (e.deltaY > 0) {
+          setCurrentSection(currentSection + 1);
+        }
+      }
+
+      <Section />;
+    </script>
+  </body>
+</html>

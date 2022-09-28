@@ -30,3 +30,18 @@
 .todo.active {
   color: green;
 }
+
+.container {
+}
+
+.slick-slide {
+  width: 100vw;
+}
+
+.slick-dots {
+  list-style: none;
+}
+
+.slick-dots .slick-active {
+  background-color: red;
+}
